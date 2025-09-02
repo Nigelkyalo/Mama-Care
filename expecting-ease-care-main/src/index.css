@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* MamaCare Maternal Health Design System */
+    --background: 340 100% 99%;
+    --foreground: 340 15% 15%;
+
+    --card: 340 50% 98%;
+    --card-foreground: 340 15% 20%;
+
+    --popover: 340 100% 99%;
+    --popover-foreground: 340 15% 15%;
+
+    /* Maternal Pink - Primary Brand */
+    --primary: 340 75% 65%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 340 85% 85%;
+
+    /* Soft Coral - Secondary */
+    --secondary: 20 85% 85%;
+    --secondary-foreground: 340 25% 25%;
+
+    --muted: 340 20% 96%;
+    --muted-foreground: 340 15% 45%;
+
+    /* Gentle Purple - Accent */
+    --accent: 290 60% 88%;
+    --accent-foreground: 290 30% 25%;
+
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 340 25% 90%;
+    --input: 340 25% 94%;
+    --ring: 340 75% 65%;
+
+    --radius: 1rem;
+
+    /* Wellness Colors */
+    --wellness: 160 60% 70%;
+    --wellness-foreground: 160 40% 15%;
+    
+    /* Emergency Red */
+    --emergency: 0 85% 65%;
+    --emergency-foreground: 0 0% 100%;
+
+    /* Premium Gold */
+    --premium: 45 80% 70%;
+    --premium-foreground: 45 40% 15%;
+
+    /* Gradients */
+    --gradient-maternal: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-wellness: linear-gradient(135deg, hsl(var(--wellness)), hsl(var(--accent)));
+    --gradient-premium: linear-gradient(135deg, hsl(var(--premium)), hsl(340 85% 80%));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+
+    /* Shadows */
+    --shadow-gentle: 0 4px 20px -4px hsl(var(--primary) / 0.15);
+    --shadow-card: 0 8px 30px -8px hsl(var(--primary) / 0.12);
+    --shadow-premium: 0 10px 40px -10px hsl(var(--premium) / 0.3);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 340 50% 98%;
+    --sidebar-foreground: 340 25% 30%;
+    --sidebar-primary: 340 75% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 340 40% 92%;
+    --sidebar-accent-foreground: 340 30% 25%;
+    --sidebar-border: 340 25% 88%;
+    --sidebar-ring: 340 75% 65%;
+  }
+
+  .dark {
+    /* Dark MamaCare Design with Blue Accents */
+    --background: 220 27% 8%;
+    --foreground: 220 9% 95%;
+
+    --card: 220 25% 10%;
+    --card-foreground: 220 9% 95%;
+
+    --popover: 220 25% 10%;
+    --popover-foreground: 220 9% 95%;
+
+    /* Deep Blue Primary for Dark Mode */
+    --primary: 220 85% 65%;
+    --primary-foreground: 220 9% 95%;
+    --primary-glow: 220 75% 75%;
+
+    /* Soft Purple Secondary */
+    --secondary: 250 30% 25%;
+    --secondary-foreground: 220 9% 95%;
+
+    --muted: 220 20% 15%;
+    --muted-foreground: 220 9% 60%;
+
+    /* Blue Accent */
+    --accent: 210 80% 70%;
+    --accent-foreground: 220 27% 8%;
+
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 220 9% 95%;
+
+    --border: 220 20% 18%;
+    --input: 220 20% 15%;
+    --ring: 220 85% 65%;
+
+    /* Dark Mode Wellness Colors */
+    --wellness: 200 70% 65%;
+    --wellness-foreground: 220 27% 8%;
+    
+    /* Emergency Red for Dark */
+    --emergency: 0 80% 65%;
+    --emergency-foreground: 220 9% 95%;
+
+    /* Premium Gold for Dark */
+    --premium: 45 85% 70%;
+    --premium-foreground: 220 27% 8%;
+
+    /* Dark Mode Gradients */
+    --gradient-maternal: linear-gradient(135deg, hsl(220 85% 65%), hsl(220 75% 75%));
+    --gradient-wellness: linear-gradient(135deg, hsl(200 70% 65%), hsl(210 80% 70%));
+    --gradient-premium: linear-gradient(135deg, hsl(45 85% 70%), hsl(220 85% 65%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 85% 65%) 0%, hsl(210 80% 70%) 100%);
+
+    /* Dark Shadows with Blue Tint */
+    --shadow-gentle: 0 4px 20px -4px hsl(220 85% 65% / 0.25);
+    --shadow-card: 0 8px 30px -8px hsl(220 85% 65% / 0.20);
+    --shadow-premium: 0 10px 40px -10px hsl(45 85% 70% / 0.3);
+
+    --sidebar-background: 220 30% 12%;
+    --sidebar-foreground: 220 9% 90%;
+    --sidebar-primary: 220 85% 65%;
+    --sidebar-primary-foreground: 220 9% 95%;
+    --sidebar-accent: 220 25% 18%;
+    --sidebar-accent-foreground: 220 9% 90%;
+    --sidebar-border: 220 20% 18%;
+    --sidebar-ring: 220 85% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
